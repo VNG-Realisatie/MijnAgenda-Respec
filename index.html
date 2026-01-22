@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
+  <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script>
+  <script src="js/config.js" class="remove"></script>
+  <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
+  <script>document.title = respecConfig.title</script>
+  <title>Default</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
+  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
+  <!-- De volgende style is noodzakelijk voor de werking van imagemaps. -->
+  <style>
+	.figure img,    .sidefigure img,    figure img,
+	.figure object, .sidefigure object, figure object {
+		max-width: none !important; 
+	}
+	h7 {
+		font-style: italic;
+	}
+	h7::after{
+		content: "\a";
+		white-space: pre;
+	}
+ 	h7::before{
+		content: "\a";
+		white-space: pre;
+	}
+  </style>
+</head>
+
+<body>
+  <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section>
+  <section id="sotd"></section><!-- Wordt automatisch ingevuld met een standaard tekst afhankelijk van de waarde van de property 'specStatus'. -->
+  <section id="SIM-MijnTaken" data-include-format="html" data-include="SIM-MijnBerichten.respec.html"></section>
+  <script>
+    let content = "";
+
+    const getClass = function(key) {
+      if (respecConfig.content[key]!==""){return ` class="${respecConfig.content[key]}"`}
+    }
+
+    for (let contentKey in respecConfig.content) {
+      content += `<section data-include-format="markdown" data-include="${contentKey}.md" ${getClass(contentKey)||""}></section>`
+    }
+
+    document.getElementById("probl").insertAdjacentHTML('afterend', content);
+  </script>
+  <section id='conformance'></section>
+  <section id='tof'></section>
+  <section id="index"></section>
+</body>
+
+
+</html>

@@ -1,0 +1,67 @@
+name: Build
+# on:
+#  workflow_call:
+on:
+  workflow_dispatch:
+jobs:
+  main:
+    name: Snapshot
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verwijder de docs map als die bestaat
+        run: |
+          if [ -d "./docs" ]; then
+            rm -rf ./docs
+            echo "Map './docs' is verwijderd."
+          else
+            echo "Map './docs' bestaat niet."
+          fi
+      - name: Commit en push verwijdering
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -r ./docs
+          git commit -m "Map 'docs' automatisch verwijderd"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: mkdir ~/static
+      - name: Create cache
+        uses: actions/cache@v4
+        with:
+          path: ~/static
+          key: ${{ github.run_id }}
+      - name: Static HTML
+        run: |
+          npx respec --localhost --src index.html --out ~/static/snapshot.html
+      - name: Check config
+        id: config
+        if: ${{ github.event_name == 'push'}}
+        run: |
+         echo "grep=false" >> $GITHUB_OUTPUT
+         if grep -q alternateFormats ./js/config.js; then
+         echo "grep=true" >> $GITHUB_OUTPUT
+         fi
+      - run: mkdir ./docs
+      - name: PDF
+        run: |
+         cp ~/static/snapshot.html snapshot.html
+         npm i puppeteer
+         python3 -m http.server 8080 &
+         wget https://raw.githubusercontent.com/Logius-standaarden/Automatisering/main/scripts/pdf.js
+         rm -f *.pdf
+         node pdf.js      
+         find *.pdf
+         mv *.pdf ~/static/
+      - name: Kopieer gegenereerde bestanden naar repository-map
+        run: cp -r ~/static/* ./docs/
+      - name: Commit en push gegenereerde bestanden
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ./docs/
+          git commit -m "Automatisch gegenereerde bestanden toegevoegd" || echo "Geen wijzigingen om te committen"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

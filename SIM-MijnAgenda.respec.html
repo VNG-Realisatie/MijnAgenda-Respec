@@ -1,0 +1,833 @@
+<!DOCTYPE HTML><h2>Gegevensdefinitie</h2><p><b>Deze tekst is normatief.</b><!--SIM-MijnTaken-0.1-1-20251012-20251217-161145 imvertor 4.4.0--></p>
+
+<div class="imageinfo overview">
+<p><b>SIM Mijn­Taken - overzicht</b>
+                        <p></p>
+                     </p></div><section><h3>Objecttypen   </h3>
+            <section id="global_class_Model_ENKELVOUDIGINFORMATIEOBJECT"><h4>   ENKELVOUDIG INFORMATIEOBJECT</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ENKELVOUDIG INFORMATIEOBJECT</td></tr><tr><th>Herkomst</th><td>VNG-R</td></tr><tr><th>Definitie</th><td>Een INFORMATIEOBJECT waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 oktober 2009</td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           
+                              <a class="link" href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a>
+                           
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_heeftalsbijlage">heeft als bijlage</a>
+                           
+                           ENKELVOUDIG INFORMATIEOBJECT
+                           [ 0 .. * ]
+                        </td><td>Een TAAK kan een of meer ENKELVOUDIGe INFORMATIEOBJECTen als bijlage hebben.
+Initieel is deze bedoeld dat een PARTIJ gegevens aanlevert, bijv. als PDF. Het is (nog) niet bedoeld voor een MEDEWERKER die bijv. een folder bij de TAAK meegeeft met instructie; voor een toelichting op de TAAK is een attribuutsoort opgenomen.
+In essentie zou een ENKELVOUDIG INFORMATIEOBJECT bij meer dan 1 TAAK gebruikt kunnen worden.
+N.B.: Als de TAAK bij een ZAAK hoort, is het wellicht nodig om het gerelateerde ENKELVOUDIG INFORMATIEOBJECT bij de ZAAK te registreren?</td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>
+                           <p>Een ENKELVOUDIG INFORMATIEOBJECT is een specialisatie van INFORMATIEOBJECT. Zie de toelichting bij dat objecttype. Bij de definitie is gebruik gemaakt van de beschrijving van 'component' in de Mo­Req2 (2008). In de dagelijkse praktijk staat 'ENKELVOUDIG INFORMATIEOBJECT' veelal synoniem met 'document'. Het ENKELVOUDIG INFORMATIEOBJECT kan deel uit maken van een SAMENGESTELD INFORMATIEOBJECT, bijvoorbeeld omdat zich in dat SAMENGESTELD INFORMATIEOBJECT andere documenten bevinden met een ander bestandsformaat, vanwege de omvang van dat SAMENGESTELD INFORMATIEOBJECT of omdat behandeling daartoe aanleiding geeft.</p>
+                           <p>Een ENKELVOUDIG INFORMATIEOBJECT dat deel uit maakt van een SAMENGESTELD INFORMATIEOBJECT kan aan andere ZAAKen gerelateerd zijn dan de ZAAK waaraan dat SAMENGESTELD INFORMATIEOBJECT gerelateerd is, veelal omdat dat ENKELVOUDIG INFORMATIEOBJECT relevant is voor meerdere ZAAKen.</p>
+                           <p>INFORMATIEOBJECTen, vooral die van de zaakbehandelende organisatie, worden soms gewijzigd of in opeenvolgende conceptversies vervaardigd. Het is uit oogpunt van verantwoording van belang de diverse informatieobjectversies te kennen. Hiertoe is bij de meeste van de attribuuttypen van ENKELVOUDIG INFORMATIEOBJECT zowel materiële als formele historie als ‘Ja’ gedeclareerd. Dit impliceert dat voor deze attributen de waarden in de diverse versies van een ENKELVOUDIG INFORMATIEOBJECT opgevraagd kunnen worden.</p>
+                        </section>
+               <h5>Overzicht constraints  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><th>Uitleg</th></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Bestandsomvang'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Formaat'</name>
+                           
+                        </th><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_Model_MEDEWERKER"><h4>   MEDEWERKER</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>MEDEWERKER</td></tr><tr><th>Herkomst</th><td>GFO Zaken 2004</td></tr><tr><th>Definitie</th><td>Een MEDEWERKER van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een ORGANISATORISCHE EENHEID.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R op basis van het GFO Zaken 2004</td></tr><tr><th>Datum opname</th><td>1 juni 2008</td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           
+                              <a class="link" href="#global_class_Model_ORGANISATORISCHEEENHEID">ORGANISATORISCHE EENHEID</a>
+                           
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_Model_ORGANISATORISCHEEENHEID_hoortbij">hoort bij</a>
+                           
+                           MEDEWERKER
+                           [ 0 .. * ]
+                        </td><td></td></tr><tr><td>
+                           
+                              <a class="link" href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a>
+                           
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_isverantwoordelijkvoor">is verantwoordelijk voor</a>
+                           
+                           MEDEWERKER
+                           [ 0 .. * ]
+                        </td><td>De MEDEWERKERs die verantwoordelijk worden gehouden voor voortgang op de TAAK.
+In geval dat de TAAK bij een ZAAK hoort, zou dat bijv. de behandelend mendewerker van de ZAAK kunnen zijn.
+Het kan ook zo zijn dat er geen MEDEWERKER nodig is, als de TAAK volledig geautomatiseerd kan worden uitgevoerd.</td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>
+                           <p>Alleen MEDEWERKERs van ORGANISATORISCHE EENHEden van de organisatie(s) die zaken behandelen, worden hier bedoeld. Dus niet MEDEWERKERs van andere organisaties zoals de externe initiatoren van zaken. Overigens kan een dergelijke MEDEWERKER wel (interne) zaken initiëren. We beperken ons tot het aangeven welke MEDEWERKER betrokken is bij een zaak en welke gegevens van die MEDEWERKER vanuit het oogpunt van een zaak relevant zijn.</p>
+                           <p>In de hier toegepaste modellering heeft een MEDEWERKER slechts één functie en behoort hij/zij bij slechts één ORGANISATORISCHE EENHEID. Dat betekent dat een MEDEWERKER die meerdere functies heeft en/of voor of bij meer dan één  ORGANISATORISCHE EENHEID werkt, meerdere keren kan voorkomen, met op onderdelen verschillende gegevenswaarden, zoals functie. MEDEWERKER is een specialisatie ('subtype') van BETROKKENE.</p>
+                        </section>
+               <h5>Overzicht constraints  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><th>Uitleg</th></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Organisatie-identificatie'</name>
+                           
+                        </th><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_Model_ORGANISATORISCHEEENHEID"><h4>   ORGANISATORISCHE EENHEID</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ORGANISATORISCHE EENHEID</td></tr><tr><th>Herkomst</th><td>GFO Zaken 2004</td></tr><tr><th>Definitie</th><td>Het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een VESTIGING VAN ZAAKBEHANDELENDE ORGANISATIE en die verantwoordelijk is voor de behandeling van zaken.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R op basis van het GFO Zaken 2004</td></tr><tr><th>Datum opname</th><td>1 juni 2008</td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           ORGANISATORISCHE EENHEID
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_Model_ORGANISATORISCHEEENHEID_hoortbij">hoort bij</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_MEDEWERKER">MEDEWERKER</a>
+                           
+                           [ 0 .. * ]
+                        </td><td></td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>
+                           <p>Alleen ORGANISATORISCHE EENHEden van de organisaties die zaken behandelen worden hier bedoeld (bijvoorbeeld afdelingen van gemeenten). Dus niet organisatorische eenheden van andere organisaties zoals de externe initiatoren van zaken (bijvoorbeeld de afdeling van een bedrijf die een vergunning aanvraagt).</p>
+                           <p>De ORGANISATORISCHE EENHEID zoals hier bedoeld is gehuisvest binnen één fysieke vestiging van de organisatie. Als een functioneel afgebakend onderdeel van de organisatie haar activiteiten uitvoert in meerdere vestigingen dan wordt die uitgewisseld als evenveel ORGANISATORISCHE EENHEden als die vestigingen. Door de relatie naar VESTIGING VAN ZAAKBEHANDELENDE ORGANISATIE en daarmee via VESTIGING naar NIET NATUURLIJK PERSOON is bekend om welke zaakbehandelende organisatie het gaat.</p>
+                           <p>Een ORGANISATORISCHE EENHEID kan zowel groot als klein zijn. De ene ORGANISATORISCHE EENHEID mag andere ORGANISATORISCHE EENHEden bevatten, maar dit wordt niet gemodelleerd. We beperken ons tot het aangeven welke ORGANISATORISCHE EENHEID welke rol heeft in een ZAAK en welke gegevens daarvan vanuit het oogpunt van een zaak relevant zijn. ORGANISATORISCHE EENHEID is een specialisatie ('subtype') van BETROKKENE.</p>
+                        </section>
+            </section>
+            <section id="global_class_Model_ZAAK"><h4>   ZAAK</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ZAAK</td></tr><tr><th>Herkomst</th><td>GFO Zaken 2004</td></tr><tr><th>Definitie</th><td>Een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden.</td></tr><tr><th>Herkomst definitie</th><td>GFO Zaken 2004</td></tr><tr><th>Datum opname</th><td>1 juni 2008</td></tr><tr><th>Unieke aanduiding</th><td>Zaakidentificatie</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht attributen  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_ZAAK_Zaakidentificatie">Zaakidentificatie</a>
+                        </td><td>De unieke identificatie van de ZAAK binnen de organisatie die verantwoordelijk is voor de behandeling van de ZAAK.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           ZAAK
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_Model_ZAAK_hoortbij">hoort bij</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop">Keuze tussen 'hoort bij' of 'heeft betrekking op'</a>
+                           
+                           [ 1 ]
+                        </td><td></td></tr><tr><td>
+                           ZAAK
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_ZAAK_isdeelzaakvan">is deelzaak van</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_ZAAK">ZAAK</a>
+                           
+                           [ 0 .. 1 ]
+                        </td><td>De verwijzing naar de ZAAK, waarom verzocht is door de initiator daarvan, die behandeld wordt in twee of meer separate ZAAKen waarvan de onderhavige ZAAK er één is.</td></tr><tr><td>
+                           ZAAK
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_ZAAK_heeftrelevanteandere">heeft relevante andere</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_ZAAK">ZAAK</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>De andere ZAAKen die relevant zijn voor de ZAAK.</td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>
+                           <p>De ZAAK vormt de kern van het zaakgericht werken. Wat in een individueel geval een ZAAK is, waar die begint en waar die eindigt, wordt bekeken vanuit het perspectief van de initiator van de ZAAK (burger, bedrijf, medewerker, etc.). Het traject van (aan)vraag cq. aanleiding voor de ZAAK tot en met de levering van de producten/of diensten die een passend antwoord vormen op die aanleiding, bepaalt de omvang en afbakening van de ZAAK. Hiermee komt de afbakening van een ZAAK overeen met een bedrijfsproces: ‘van klant tot klant’. Dit betekent onder meer dat onderdelen van bedrijfsprocessen geen zelfstandige zaken vormen. Het betekent ook dat een aanleiding die niet leidt tot de start van de uitvoering van een bedrijfsproces, niet leidt tot een ZAAK (deze wordt behandeld in het kader van een reeds lopende ZAAK).</p>
+                           <p>In de praktijk kan dit tot problemen leiden als de gewenste producten en diensten in verschillende bedrijfsprocessen vervaardigd worden d.w.z. voor elk gewenst product of dienst, of groep daarvan, is een zelfstandig bedrijfsproces operationeel. De ZAAK wordt dan behandeld in deelzaken door per deelzaak één bedrijfsproces uit te voeren. Met de ‘hoofdzaak’ wordt gecoördineerd dat de optelsom van de te leveren producten en diensten beantwoord aan de oorspronkelijke klantvraag. Zowel een ZAAK zonder deelzaken als een deelzaak betreft dus telkens één bedrijfsproces. Ook een ‘deelzaak’ modelleren we als een ZAAK. Deze is gerelateerd aan de ‘hoofdzaak’: de ZAAK die het gevolg is van het verzoek van de initiator. Door deze onderlinge relatering cq. clustering wordt het zaakgericht werken voor de behandelende organisatie(s) beheersbaar èn blijft het mogelijk de initiator van de ZAAK vanuit zijn perspectief te informeren. Het relateren van hoofd- en deelzaken modelleren we met de relatiesoort 'ZAAK is deelzaak van ZAAK'.</p>
+                           <p>In samenwerkingen tussen organisaties komt het steeds vaker voor dat een organisatie gevraagd wordt een bijdrage te leveren aan een ZAAK van een andere organisatie. Ook binnen organisaties komt dit voor. We doelen hiermee dus niet op de situatie dat meerdere organisatiedelen gezamenlijk uitvoering (zouden moeten) geven aan één bedrijfsproces cq. ZAAK. In dergelijke samenwerkingen is sprake van twee zelfstandige bedrijfsprocessen oftewel twee gerelateerde zaken met ieder hun eigen aanleiding (i.t.t. deelzaken bij een hoofdzaak die alle dezelfde aanleiding hebben). Van belang is dat zowel  opdrachtgever als opdrachtnemer van de andere partij weten om welke ZAAK het gaat. Het informatiemodel ondersteunt dit op twee wijzen. Indien opdrachtgever en opdrachtnemer binnen hetzelfde informatiedomein opereren voor hun zaakinformatievoorziening (‘ze kunnen bij elkaars zaken’), dan wordt gebruik gemaakt van de relatie ‘ZAAK heeft gerelateerde ZAAK’. Indien beide zaken zich binnen verschillende informatiedomein bevinden dan wordt vanuit beide zaken verwezen naar de andere ZAAK door middel van het groepattribuutsoort ‘Gerelateerde externe ZAAK’.</p>
+                           <p>Elke ZAAK heeft ‘ergens betrekking op’ wat we modelleren met de relatie naar ZAAKOBJECT. In het geval dat de ZAAK op geen van de, met ZAAKOBJECT bedoelde, objecten betrekking heeft, wordt het object van de ZAAK vastgelegd met de attribuutgroep ‘Ander zaakobject’. Soms heeft de ene ZAAK betrekking op een andere ZAAK, zoals een bezwaarzaak die volgt op een vergunningzaak. Dit modelleren we eveneens met de relatie ‘ZAAK heeft gerelateerde ZAAK’. De aard van de relatie modelleren we met de relatieklasse ZAKENRELATIE. </p>
+                           <p>Ook heeft elke ZAAK één of meer betrokkenen, wat we modelleren via de ROL.</p>
+                           <p>Een ZAAK, met eventuele deelzaken (of alleen de verwijzing daarnaar) dan wel de verwijzing naar de ‘hoofdzaak’, alle kenmerken, alle daaraan gerelateerde INFORMATIEOBJECTen en alle andere gerelateerde gegevens (via ROL, ZAAKOBJECT, etc.) vormen gezamenlijk het zaakdossier. Het zaakdossier modelleren we dus niet als apart objecttype. Evenmin modelleren we een zgn. objectdossier. Dit betreft immers alle zaken, met bijbehorende kenmerken en INFORMATIEOBJECTen, eventueel van bepaalde ZAAKTYPEn, die gerelateerd zijn aan een bepaald OBJECT.</p>
+                        </section>
+               <h5>Overzicht constraints  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><th>Uitleg</th></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Archiefactiedatum'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Archiefnominatie'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Archiefstatus'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Bronorganisatie'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Procesobjectaard'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Startdatum bewaartermijn'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Vertrouwelijkheidaanduiding'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Zaakgeometrie'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Zaakidentificatie'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from relation 'heeft bij afronding' to 'RESULTAATTYPE'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from relation 'heeft relevante andere' to 'ZAAK'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from relation 'is deelzaak van' to 'ZAAK'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from relation 'is van versie van' to 'ZAAKTYPE'</name>
+                           
+                        </th><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_Model_NATUURLIJKPERSOON"><h4>   NATUURLIJK PERSOON</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>NATUURLIJK PERSOON</td></tr><tr><th>Herkomst</th><td>Door VNG-R toegevoegd objecttype,ontleend aan het GFO BG</td></tr><tr><th>Definitie</th><td>Een PERSOON zijnde een mens.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>9 april 2007</td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           NATUURLIJK PERSOON
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_NATUURLIJKPERSOON_ouder">heeft als ouder: ouder</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_NATUURLIJKPERSOON">NATUURLIJK PERSOON</a>
+                           
+                           [ 0 .. 2 ]
+                        </td><td>De ingezetene, zijnde de ouder, waarnaar de KIND-OUDER-RELATIE verwijst</td></tr><tr><td>
+                           NATUURLIJK PERSOON
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_NATUURLIJKPERSOON_partner">heeft als partner: partner</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_NATUURLIJKPERSOON">NATUURLIJK PERSOON</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>De INGEZETENE(n) bij wie de PARTNER-RELATIE is geregistreerd.</td></tr><tr><td>
+                           NATUURLIJK PERSOON
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_Model_PARTIJ">PARTIJ</a>
+                           
+                        </td><td>Dat waar een EXTERNE TAAK aan kan worden toegewezen.
+Er is gekozen om de PARTIJ als abstracte klasse te modelleren, en als generalisatie van NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON en VESTIGING.</td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>Het betreft de verzameling van personen, ingeschreven in de Basis­Registratie Personen (GBA en RNI), woonachtig in de gemeente dan wel elders en van belang voor de gemeentelijke taakuitoefening (ingezetenen) alsmede andere personen, woonachtig in het binnen- of buitenland, niet ingeschreven in de GBA maar wel van belang voor de gemeentelijke taakuitoefening zoals buitenlanders die bijvoorbeeld belastingplichtig zijn voor een gemeentelijke belasting. NATUURLIJK PERSOON is een specialisatie van PERSOON.</section>
+               <h5>Overzicht constraints  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><th>Uitleg</th></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Geslachtsaanduiding'</name>
+                           
+                        </th><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_Model_NIETNATUURLIJKPERSOON"><h4>   NIET-NATUURLIJK PERSOON</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>NIET-NATUURLIJK PERSOON</td></tr><tr><th>Herkomst</th><td>VNG-R</td></tr><tr><th>Definitie</th><td>Een PERSOON zijnde geen NATUURLIJK PERSOON.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>9 april 2007</td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           NIET-NATUURLIJK PERSOON
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_Model_PARTIJ">PARTIJ</a>
+                           
+                        </td><td>Dat waar een EXTERNE TAAK aan kan worden toegewezen.
+Er is gekozen om de PARTIJ als abstracte klasse te modelleren, en als generalisatie van NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON en VESTIGING.</td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>
+                           <p>In het handelsregister worden niet-natuurlijke personen met één of meer vestigingen in Nederland ingeschreven. Daarnaast betreft het ook niet-natuurlijke personen die als functionaris optreden voor een ander natuurlijk persoon of niet- natuurlijk persoon. </p>
+                           <p>De hier bedoelde verzameling niet-natuurlijke personen betreft tevens andere (buitenlandse) niet-natuurlijke personen voor zover deze van belang zijn voor het uitoefenen van de gemeentelijke taken, ongeacht of deze een vestiging in Nederland hebben. Zo kan het een buitenlandse niet-natuurlijke persoon betreffen die onroerend goed binnen de gemeentegrens in eigendom heeft en daarover belasting dient te betalen.</p>
+                           <p>NIET-NATUURLIJK PERSOON is een specialisatie van PERSOON.</p>
+                        </section>
+               <h5>Overzicht constraints  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><th>Uitleg</th></tr><tr><th>
+                           
+                              <name>Constraint from attribute '(Statutaire) Naam'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from relation 'heeft als bezoekadres' to 'ADRESSEERBAAR OBJECT AANDUIDING'</name>
+                           
+                        </th><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_Model_VESTIGING"><h4>   VESTIGING</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>VESTIGING</td></tr><tr><th>Herkomst</th><td>NHR</td></tr><tr><th>Definitie</th><td>Een gebouw of complex van gebouwen waar duurzame uitoefening van de activiteiten van een onderneming of rechtspersoon plaatsvindt.</td></tr><tr><th>Herkomst definitie</th><td>NHR</td></tr><tr><th>Datum opname</th><td>9 april 2007</td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           VESTIGING
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_Model_PARTIJ">PARTIJ</a>
+                           
+                        </td><td>Dat waar een EXTERNE TAAK aan kan worden toegewezen.
+Er is gekozen om de PARTIJ als abstracte klasse te modelleren, en als generalisatie van NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON en VESTIGING.</td></tr></tbody></table>
+                  
+               
+               <section class="notoc"><h5>Toelichting  </h5>
+                           <p>Ofschoon de definitie in het NHR doet vermoeden dat het hier om een ruimtelijk object gaat, beschouwen we een VESTIGING in het RSGB als een specialisatie van SUBJECT. De toelichting in de catalogus NHR lijkt dit te bevestigen:</p>
+                           <p>“De vestiging van een onderneming of een maatschappelijke activiteit (type niet onderneming) moet men opvatten als een (kleinste eenheid) bundeling van economische activiteiten. De vestiging is een combinatie van activiteiten en locatie. Wisseling van zowel de activiteiten als de locatie maakt dat er sprake is van een nieuwe vestiging. In de toekomstige situatie is er een eenduidige verwijzing naar een adresseerbaar object (een ligplaats, standplaats of verblijfsobject (BAG)) voor het bezoekadres. Als er sprake is van een inschrijfplichtige onderneming maar het adresseerbare object is nog niet bekend, omdat bijv. een bedrijfspand nog gebouwd wordt of er vanuit huis gewerkt wordt, kan als adres het woonadres (van de eigenaar) worden genomen. </p>
+                           <p>De vestiging kan aldus verhuizen, heeft een bezoekadres en een postadres en een naam. Allemaal zeer ongewone aspecten voor een locatie c.q. gebouwd object. Het lijkt dan ook meer weg te hebben van een subject (die activiteiten uitvoert) in een gebouwd object. Dit wordt versterkt doordat het wenselijk is bij het registreren van de WOZ-belanghebbende of een vergunningaanvraag een contactpersoon vast te leggen: iemand die werkzaam is in een vestiging (een NNP kent geen medewerkers) en voor dat geval optreedt als vertegenwoordiger van de vestiging van de onderneming/NNP.</p>
+                           <p>De definitie beperkt de locaties van VESTIGINGen tot gebouwen, In het RSGB gaan we er van uit dat een VESTIGING haar activiteiten ook kan uitoefenen op een STANDPLAATS, op een LIGPLAATS, op een  OVERIG BENOEMD TERREIN of in een OVERIG GEBOUWD OBJECT. VESTIGING overerft gegevens van de generalisatie SUBJECT. Onder meer zijn dat de Datum begin geldigheid en Datum einde geldigheid voor resp. Datum in gebruikname en Datum beëindiging in het NHR. Ook het buitenlands adres indien een vestiging verplaatst wordt naar het buitenland.</p>
+                        </section>
+               <h5>Overzicht constraints  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><th>Uitleg</th></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Fulltime werkzame mannen'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Fulltime werkzame vrouwen'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Parttime werkzame mannen'</name>
+                           
+                        </th><td></td></tr><tr><th>
+                           
+                              <name>Constraint from attribute 'Parttime werkzame vrouwen'</name>
+                           
+                        </th><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_Model_EXTERNETAAK"><h4>   (EXTERNE) TAAK</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>(EXTERNE) TAAK</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Een EXTERNE TAAK is een welomschreven en afgebakende hoeveelheid werk dat iemand doet of hoort te doen, horende bij een ZAAK of betrekking hebbende op een PRODUCT/DIENST.
+In tegenstelling tot een ACTIE heeft een EXTERNE TAAK een verplichtend karakter; de taak moet uitgevoerd worden.
+
+ Indien de TAAK is Afgebroken, dan kan reden­Afgebroken voorzien worden van een specifieke toelichting.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht attributen  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_redenAfgebroken">(reden­Afgebroken)</a>
+                        </td><td>Dit kan alleen een waarde hebben indien de TAAK is Afgebroken.
+N.B.: Het attribuutsoort staat tussen haakjes omdat het (nog) niet is geïmplementeerd.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>0 .. 1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_datumHerinnering">datum­Herinnering</a>
+                        </td><td>Het moment dat de PARTIJ herinnerd moet worden aan het uitvoeren van de EXTERNE TAAK.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_einddatumHandelingstermijn">einddatum­Handelingstermijn</a>
+                        </td><td>De dag waarop de taak uiterlijk uitgevoerd moet zijn.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_handelingsperspectief">handelingsperspectief</a>
+                        </td><td>Hetgene wat de PARTIJ moet doen om de TAAK uit te kunnen voeren.
+Bijv. U moet betalen.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_startdatumTaak">startdatum­Taak</a>
+                        </td><td>De dag van het eerste moment dat de taak open staat.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_taakstatus">taakstatus</a>
+                        </td><td>De huidige status van de taak.</td><td>
+                           <a class="link" href="#detail_class_Model_TAAKSTATUS">TAAKSTATUS</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_titel">titel</a>
+                        </td><td>De titel van de taak.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_EXTERNETAAK_toelichting">toelichting</a>
+                        </td><td>De toelichting op de taak.
+Bijv. instructies hoe de taak uitgevoerd moet of kan worden.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           (EXTERNE) TAAK
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_istoegewezenaan">is toegewezen aan</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_PARTIJ">PARTIJ</a>
+                           
+                           [ 1 ]
+                        </td><td></td></tr><tr><td>
+                           (EXTERNE) TAAK
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_heeftalsbijlage">heeft als bijlage</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_ENKELVOUDIGINFORMATIEOBJECT">ENKELVOUDIG INFORMATIEOBJECT</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>Een TAAK kan een of meer ENKELVOUDIGe INFORMATIEOBJECTen als bijlage hebben.
+Initieel is deze bedoeld dat een PARTIJ gegevens aanlevert, bijv. als PDF. Het is (nog) niet bedoeld voor een MEDEWERKER die bijv. een folder bij de TAAK meegeeft met instructie; voor een toelichting op de TAAK is een attribuutsoort opgenomen.
+In essentie zou een ENKELVOUDIG INFORMATIEOBJECT bij meer dan 1 TAAK gebruikt kunnen worden.
+N.B.: Als de TAAK bij een ZAAK hoort, is het wellicht nodig om het gerelateerde ENKELVOUDIG INFORMATIEOBJECT bij de ZAAK te registreren?</td></tr><tr><td>
+                           (EXTERNE) TAAK
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_isverantwoordelijkvoor">is verantwoordelijk voor</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_MEDEWERKER">MEDEWERKER</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>De MEDEWERKERs die verantwoordelijk worden gehouden voor voortgang op de TAAK.
+In geval dat de TAAK bij een ZAAK hoort, zou dat bijv. de behandelend mendewerker van de ZAAK kunnen zijn.
+Het kan ook zo zijn dat er geen MEDEWERKER nodig is, als de TAAK volledig geautomatiseerd kan worden uitgevoerd.</td></tr><tr><td>
+                           (EXTERNE) TAAK
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_Keuzerelatie">Keuze relatie</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop">Keuze tussen 'hoort bij' of 'heeft betrekking op'</a>
+                           
+                           [ 0 .. 1 ]
+                        </td><td></td></tr></tbody></table>
+                  
+               
+            </section>
+            <section id="global_class_Model_PRODUCTDIENST"><h4>   PRODUCT/DIENST</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>PRODUCT/DIENST</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           PRODUCT/DIENST
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_Model_PRODUCTDIENST_heeftbetrekkingop">heeft betrekking op</a>
+                           
+                           
+                              <a class="link" href="#global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop">Keuze tussen 'hoort bij' of 'heeft betrekking op'</a>
+                           
+                           [ 1 ]
+                        </td><td>De TAAK kan betrekking hebben op een door de gemeente geleverd(e) product/dienst, waarbij de ZAAK die initieel daartoe heeft geleid afgesloten is, maar het afnemen van het product/de dienst wel door moet kunnen gaan.
+Voorbeelden:
+
+Erfpacht moet jaarlijks betaald moet worden. Voor de eerste keer was er een zaak. Voor jaren daarna geldt dat een betaaltaak moet worden uitgevoerd, om recht op het product/dienst te behouden.
+Idem voor gemeentelijke belasting.</td></tr></tbody></table>
+                  
+               
+            </section>
+            <section id="global_class_Model_BETAALTAAK"><h4>   BETAALTAAK</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>BETAALTAAK</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Een TAAK waarbij de PARTIJ een betaling moet doen.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht attributen  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_BETAALTAAK_BankrekeningOntvanger">Bankrekening­Ontvanger</a>
+                        </td><td>Het IBAN waar de betaling ontvangen wordt.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_BETAALTAAK_bedrag">bedrag</a>
+                        </td><td>Het bedrag dat betaald moet worden.</td><td>
+                           <a class="link" href="#global_class_Model_TypeBedrag">Type­Bedrag</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_BETAALTAAK_omschrijvingTransactie">omschrijving­Transactie</a>
+                        </td><td>Een omschrijving van de financiële transactie.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           BETAALTAAK
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a>
+                           
+                        </td><td>Een EXTERNE TAAK is een welomschreven en afgebakende hoeveelheid werk dat iemand doet of hoort te doen, horende bij een ZAAK of betrekking hebbende op een PRODUCT/DIENST.
+In tegenstelling tot een ACTIE heeft een EXTERNE TAAK een verplichtend karakter; de taak moet uitgevoerd worden.
+
+ Indien de TAAK is Afgebroken, dan kan reden­Afgebroken voorzien worden van een specifieke toelichting.</td></tr></tbody></table>
+                  
+               
+            </section>
+            <section id="global_class_Model_GEGEVENSUITVRAAGTAAK"><h4>   GEGEVENSUITVRAAGTAAK</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>GEGEVENSUITVRAAGTAAK</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Een TAAK waarbij de PARTIJ gegevens aan moet leveren.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h5>Overzicht attributen  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           Vraag­Antwoord
+                        :</td><td></td><td>
+                           <a class="link" href="#detail_class_Model_VraagAntwoord">Vraag­Antwoord</a>
+                        </td><td>1 .. *</td></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_Model_VraagAntwoord_antwoord">antwoord</a>
+                        </td><td>Ontvangen gegevens (technisch: als key-value object).</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>0 .. 1</td></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_Model_VraagAntwoord_vraag">vraag</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           GEGEVENSUITVRAAGTAAK
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a>
+                           
+                        </td><td>Een EXTERNE TAAK is een welomschreven en afgebakende hoeveelheid werk dat iemand doet of hoort te doen, horende bij een ZAAK of betrekking hebbende op een PRODUCT/DIENST.
+In tegenstelling tot een ACTIE heeft een EXTERNE TAAK een verplichtend karakter; de taak moet uitgevoerd worden.
+
+ Indien de TAAK is Afgebroken, dan kan reden­Afgebroken voorzien worden van een specifieke toelichting.</td></tr></tbody></table>
+                  
+               
+            </section>
+            <section id="global_class_Model_PARTIJ"><h4>   PARTIJ</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>PARTIJ</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Dat waar een EXTERNE TAAK aan kan worden toegewezen.
+Er is gekozen om de PARTIJ als abstracte klasse te modelleren, en als generalisatie van NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON en VESTIGING.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Unieke aanduiding</th><td> </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h5>Overzicht relaties  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Relatienaam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           
+                              <a class="link" href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a>
+                           
+                           [ 0 .. * ]
+                           
+                              <a class="link" href="#detail_association_Model_EXTERNETAAK_istoegewezenaan">is toegewezen aan</a>
+                           
+                           PARTIJ
+                           [ 1 ]
+                        </td><td></td></tr></tbody></table>
+                  
+               
+            </section>
+         </section><section><h3>Referentielijsten   </h3>
+            <section id="global_class_Model_VALUTASOORT"><h4>Referentielijst   VALUTASOORT</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>VALUTASOORT</td></tr><tr><th>Mnemonic</th><td>  </td></tr><tr><th>Herkomst</th><td>BRK</td></tr><tr><th>Definitie</th><td>De mogelijke munteenheden waarin een geldbedrag kan worden uitgedrukt conform de waardelijst Valutasoort van het Kadaster</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 mei 2016</td></tr><tr><th>Data locatie</th><td>zie http://www.kadaster.nl/schemas/waardelijsten/Valuta</td></tr><tr><th>Unieke aanduiding</th><td>Valutacode</td></tr></tbody></table>
+               <section><h5>Overzicht referentie elementen   </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Referentie element</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_VALUTASOORT_Begindatumgeldigheidvalutasoort">Begindatum geldigheid valutasoort</a>
+                        </td><td>De datum waarop de valuta is ontstaan.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_VALUTASOORT_Einddatumgeldigheidvalutasoort">Einddatum geldigheid valutasoort</a>
+                        </td><td>De datum waarop de valuta is opgeheven.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                        </td><td>0 .. 1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_VALUTASOORT_Naamvaluta">Naam valuta</a>
+                        </td><td>De naam van de valuta.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_VALUTASOORT_Valutacode">Valutacode</a>
+                        </td><td>Een unieke  code van de valuta.</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               </section>
+            </section>
+         </section><section><h3>Keuzen   </h3>
+            <section id="global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop"><h4>   Keuze tussen 'hoort bij' of 'heeft betrekking op'</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Keuze tussen 'hoort bij' of 'heeft betrekking op'</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr></tbody></table>
+            </section>
+         </section><section><h3>Gegevensgroeptypen   </h3>
+            <section id="global_class_Model_VraagAntwoord"><h4>Gegevensgroep   Vraag­Antwoord</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Vraag­Antwoord</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr></tbody></table>
+               <h5>Overzicht attributen  </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_Model_VraagAntwoord_antwoord">antwoord</a>
+                        </td><td>Ontvangen gegevens (technisch: als key-value object).</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>0 .. 1</td></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_Model_VraagAntwoord_vraag">vraag</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+            </section>
+         </section><section><h3>Gestructureerde datatypen   </h3>
+            <section id="global_class_Model_TypeBedrag"><h4>Gestructureerd datatype   Type­Bedrag</h4>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Type­Bedrag</td></tr><tr><th>Herkomst</th><td>BRK</td></tr><tr><th>Definitie</th><td>Een hoeveelheid geld in cijfers in een bepaalde valuta.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td>1 mei 2016</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Patroon</th><td> </td></tr></tbody></table>
+               <section><h5>Overzicht data elementen   </h5>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Data element</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_TypeBedrag_som">som</a>
+                        </td><td>Een hoeveelheid</td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Real</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_Model_TypeBedrag_valutasoort">valutasoort</a>
+                        </td><td>Aanduiding van de valutasoort. </td><td>
+                           <a class="link" href="#global_class_Model_VALUTASOORT">VALUTASOORT</a>
+                        </td><td>1</td></tr></tbody></table>
+               </section>
+            </section>
+         </section><section><h3>Enumeraties   </h3>
+            <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th><a class="link" href="#detail_class_Model_TAAKSTATUS">TAAKSTATUS</a></th><td>Een taak kan verschillende statussen hebben. Als de taak wordt aangemaakt, krijgt de taak initieel de status ‘Open’. Als de taak door de externe partij is uitgevoerd, wordt de status op ‘Uitgevoerd’ gezet. Daarna kan het resultaat van de uitvoering door een medewerker worden beoordeeld. Zodra dit resultaat is beoordeeld en verwerkt, krijgt de taak de status ‘Verwerkt’. Daarmee is de taak afgehandeld.
+
+Als de taak niet is uitgevoerd (bijvoorbeeld na het verstrijken van de handelingsdatum) wordt de status automatisch (via een timer) of handmatig door een medewerker gewijzigd naar ‘Niet uitgevoerd’.
+
+Als de externe partij de taak analoog heeft uitgevoerd (bijvoorbeeld als een document bij de balie is afgegeven) dan kan de medewerker de status direct van ‘Open’ naar ‘Uitgevoerd’ zetten.
+
+Als de taak niet door de externe partij uitgevoerd hoeft te worden of als de taak foutief is ingeboekt, dan kan de medewerker de taak op ‘Afgebroken’ zetten. Er vindt daarna geen verwerking van de taak meer plaats.</td></tr><tr><th><a class="link" href="#detail_class_Model_periodeEenheid">periode­Eenheid</a></th><td>Opsomming van waarden van de tijdseenheid waarin een periode wordt uitgedrukt.</td></tr></tbody></table>
+         </section><section><h3>Attribuut- en relatiesoort details  </h3>
+            <section><h4>Objecttype details  </h4>
+               <section id="detail_class_Model_ORGANISATORISCHEEENHEID"><h5>   ORGANISATORISCHE EENHEID</h5>
+                  <section id="detail_association_Model_ORGANISATORISCHEEENHEID_hoortbij"><h6>Relatiesoort details  <a href="#global_class_Model_ORGANISATORISCHEEENHEID">ORGANISATORISCHE EENHEID</a> hoort bij</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>hoort bij</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_MEDEWERKER">MEDEWERKER</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>Nee</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. *</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+               </section>
+               <section id="detail_class_Model_ZAAK"><h5>   ZAAK</h5>
+                  <section id="detail_attribute_Model_ZAAK_Zaakidentificatie"><h6>Attribuutsoort details  <a href="#global_class_Model_ZAAK">ZAAK</a> Zaakidentificatie</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Zaakidentificatie</td></tr><tr><th>Herkomst</th><td>GFO Zaken 2004</td></tr><tr><th>Definitie</th><td>De unieke identificatie van de ZAAK binnen de organisatie die verantwoordelijk is voor de behandeling van de ZAAK.</td></tr><tr><th>Herkomst definitie</th><td>GFO Zaken 2004</td></tr><tr><th>Datum opname</th><td>1 juni 2008</td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td>40</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>Alle alfanumerieke tekens m.u.v. diacrieten</td></tr><tr><th>Indicatie afleidbaar</th><td> </td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                     <div class="notoc"><h7>Toelichting  </h7>Het betreft de identificatie van een zaak zoals toegekend door de organisatie die de zaak als eerste in behandeling heeft genomen. Dit identificeert een zaak uniek binnen de desbetreffende organisatie en kan worden gebruikt om snel te kunnen refereren aan een bepaalde zaak in mondelinge en schriftelijke communicatie. Door combinatie met het RSIN van die organisatie, als waarde van de attribuutsoort ‘Bronorganisatie’, wordt een unieke aanduiding van een zaak voor geheel Nederland verkregen. Deze unieke aanduiding wijzigt niet, ook niet indien de (behandeling van de) zaak over zou gaan naar een andere organisatie. Er is immers maar één organisatie die de zaak gecreëerd heeft.</div>
+                  </section>
+                  <section id="detail_association_Model_ZAAK_hoortbij"><h6>Relatiesoort details  <a href="#global_class_Model_ZAAK">ZAAK</a> hoort bij</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>hoort bij</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop">Keuze tussen 'hoort bij' of 'heeft betrekking op'</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>Nee</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+                  <section id="detail_association_Model_ZAAK_isdeelzaakvan"><h6>Relatiesoort details  <a href="#global_class_Model_ZAAK">ZAAK</a> is deelzaak van</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is deelzaak van</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_ZAAK">ZAAK</a>
+                           </td></tr><tr><th>Herkomst</th><td>VNG-R</td></tr><tr><th>Definitie</th><td>De verwijzing naar de ZAAK, waarom verzocht is door de initiator daarvan, die behandeld wordt in twee of meer separate ZAAKen waarvan de onderhavige ZAAK er één is.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 juni 2008</td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Ja</td></tr><tr><th>Indicatie formele historie</th><td>Ja</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                     <div class="notoc"><h7>Toelichting  </h7>Niet altijd is het mogelijk om een zaak, die in de ogen van de initiator daarvan als één samenhangend geheel beschouwd wordt, als één zaak binnen de organisatie te behandelen. Dit doet zich voor als de gewenste producten en diensten in verschillende bedrijfsprocessen vervaardigd worden d.w.z. voor elk gewenst product of dienst, of groep daarvan, is een zelfstandig bedrijfsproces operationeel. In dat geval kan de zaakbehandelende organisatie er voor kiezen de aangevraagde zaak te behandelen in meerdere ‘deelzaken’ die ieder op zich weer een zaak vormen voor één bedrijfsproces. Voor de initiator is en blijft de zaak als geheel relevant. De zaakbehandelende organisatie richt zich meer op de deelzaken en de coördinatie daartussen (de ‘hoofdzaak’). De relatiesoort brengt het verband aan tussen al deze zaken zodat alle betrokkenen juist en doelgericht geinformeerd zijn.</div>
+                  </section>
+                  <section id="detail_association_Model_ZAAK_heeftrelevanteandere"><h6>Relatiesoort details  <a href="#global_class_Model_ZAAK">ZAAK</a> heeft relevante andere</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft relevante andere</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_ZAAK">ZAAK</a>
+                           </td></tr><tr><th>Herkomst</th><td>VNG-R</td></tr><tr><th>Definitie</th><td>De andere ZAAKen die relevant zijn voor de ZAAK.</td></tr><tr><th>Herkomst definitie</th><td>GFO Zaken 2004, aangepast door VNG-R</td></tr><tr><th>Datum opname</th><td>1 juni 2008</td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Ja</td></tr><tr><th>Indicatie formele historie</th><td>Ja</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. *</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                     <div class="notoc"><h7>Toelichting  </h7>
+                                 <p>Het gaat hier om andere zaken, binnen hetzelfde informatiedomein als waar de onderhanden zaak wordt behandeld, die op enigerlei wijze relevant zijn voor de onderhanden zaak. Dat kunnen eerder in behandeling genomen en/of afgeronde zaken zijn die aanleiding geven tot het verzoeken om een nieuwe zaak. Bijvoorbeeld in het geval van een bezwaar (nieuwe zaak) tegen een besluit dat is genomen in een andere zaak. Het kunnen zaken zijn waarop de onderhanden zaak betrekking heeft, vergelijkbaar met de zaakobjecten waarop een zaak betrekking heeft. En het kunnen zaken zijn waaraan een bijdrage geleverd wordt door de onderhanden zaak, vergelijkbaar met gerelateerde externe zaken. Een voorbeeld is het behandelen van zienswijzen in evenzovele daartoe dienende zaken waarvan de uitkomsten relevant zijn voor de (andere) vergunningzaak. </p>
+                                 <p>Deze relatiesoort kent eigenschappen die we modelleren met de relatieklasse ZAKENRELATIE.</p>
+                                 <p></p>
+                                 <p>Het is mogelijk dat een dergelijke bijdrage geleverd wordt door een zaak van een organisatie buiten het eigen informatiedomein. In dat geval is de desbetreffende zaak niet beschikbaar. De verwijzing naar een dergelijke zaak wordt gelegd met het groepattribuutsoort ‘Gerelateerde externe zaak’ van ZAAK.</p>
+                              </div>
+                  </section>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+               </section>
+               <section id="detail_class_Model_NATUURLIJKPERSOON"><h5>   NATUURLIJK PERSOON</h5>
+                  <section id="detail_association_Model_NATUURLIJKPERSOON_ouder"><h6>Relatiesoort details  <a href="#global_class_Model_NATUURLIJKPERSOON">NATUURLIJK PERSOON</a> heeft als ouder</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als ouder</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_NATUURLIJKPERSOON">NATUURLIJK PERSOON</a>
+                           </td></tr><tr><th>Herkomst</th><td>VNG-R o.b.v. GBA</td></tr><tr><th>Definitie</th><td>De ingezetene, zijnde de ouder, waarnaar de KIND-OUDER-RELATIE verwijst</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>9 april 2007</td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Ja</td></tr><tr><th>Indicatie formele historie</th><td>n.v.t.</td></tr><tr><th>Indicatie in onderzoek</th><td>Ja</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td>Ja</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. 2</td></tr><tr><th>Indicatie authentiek</th><td>Basisgegeven (niet-authentiek)</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+                  <section id="detail_association_Model_NATUURLIJKPERSOON_partner"><h6>Relatiesoort details  <a href="#global_class_Model_NATUURLIJKPERSOON">NATUURLIJK PERSOON</a> heeft als partner</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als partner</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_NATUURLIJKPERSOON">NATUURLIJK PERSOON</a>
+                           </td></tr><tr><th>Herkomst</th><td>VNG-R o.b.v. GBA</td></tr><tr><th>Definitie</th><td>De INGEZETENE(n) bij wie de PARTNER-RELATIE is geregistreerd.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R o.b.v. GBA</td></tr><tr><th>Datum opname</th><td>9 april 2007</td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>n.v.t.</td></tr><tr><th>Indicatie in onderzoek</th><td>Ja</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td>Ja</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. *</td></tr><tr><th>Indicatie authentiek</th><td>Basisgegeven (niet-authentiek)</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+                  
+               </section>
+               
+               
+               <section id="detail_class_Model_EXTERNETAAK"><h5>   (EXTERNE) TAAK</h5>
+                  <section id="detail_attribute_Model_EXTERNETAAK_redenAfgebroken"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> (reden­Afgebroken)</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>(reden­Afgebroken)</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Dit kan alleen een waarde hebben indien de TAAK is Afgebroken.
+N.B.: Het attribuutsoort staat tussen haakjes omdat het (nog) niet is geïmplementeerd.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_datumHerinnering"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> datum­Herinnering</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>datum­Herinnering</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Het moment dat de PARTIJ herinnerd moet worden aan het uitvoeren van de EXTERNE TAAK.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_einddatumHandelingstermijn"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> einddatum­Handelingstermijn</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>einddatum­Handelingstermijn</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De dag waarop de taak uiterlijk uitgevoerd moet zijn.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_handelingsperspectief"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> handelingsperspectief</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>handelingsperspectief</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Hetgene wat de PARTIJ moet doen om de TAAK uit te kunnen voeren.
+Bijv. U moet betalen.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_startdatumTaak"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> startdatum­Taak</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>startdatum­Taak</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De dag van het eerste moment dat de taak open staat.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_taakstatus"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> taakstatus</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>taakstatus</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De huidige status van de taak.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="link" href="#detail_class_Model_TAAKSTATUS">TAAKSTATUS</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_titel"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> titel</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>titel</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De titel van de taak.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_EXTERNETAAK_toelichting"><h6>Attribuutsoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> toelichting</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>toelichting</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De toelichting op de taak.
+Bijv. instructies hoe de taak uitgevoerd moet of kan worden.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_association_Model_EXTERNETAAK_istoegewezenaan"><h6>Relatiesoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> is toegewezen aan</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is toegewezen aan</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_PARTIJ">PARTIJ</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>Nee</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+                  <section id="detail_association_Model_EXTERNETAAK_heeftalsbijlage"><h6>Relatiesoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> heeft als bijlage</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als bijlage</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_ENKELVOUDIGINFORMATIEOBJECT">ENKELVOUDIG INFORMATIEOBJECT</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Een TAAK kan een of meer ENKELVOUDIGe INFORMATIEOBJECTen als bijlage hebben.
+Initieel is deze bedoeld dat een PARTIJ gegevens aanlevert, bijv. als PDF. Het is (nog) niet bedoeld voor een MEDEWERKER die bijv. een folder bij de TAAK meegeeft met instructie; voor een toelichting op de TAAK is een attribuutsoort opgenomen.
+In essentie zou een ENKELVOUDIG INFORMATIEOBJECT bij meer dan 1 TAAK gebruikt kunnen worden.
+N.B.: Als de TAAK bij een ZAAK hoort, is het wellicht nodig om het gerelateerde ENKELVOUDIG INFORMATIEOBJECT bij de ZAAK te registreren?</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>Nee</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. *</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+                  <section id="detail_association_Model_EXTERNETAAK_isverantwoordelijkvoor"><h6>Relatiesoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> is verantwoordelijk voor</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is verantwoordelijk voor</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_MEDEWERKER">MEDEWERKER</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De MEDEWERKERs die verantwoordelijk worden gehouden voor voortgang op de TAAK.
+In geval dat de TAAK bij een ZAAK hoort, zou dat bijv. de behandelend mendewerker van de ZAAK kunnen zijn.
+Het kan ook zo zijn dat er geen MEDEWERKER nodig is, als de TAAK volledig geautomatiseerd kan worden uitgevoerd.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>Nee</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. *</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+                  <section id="detail_association_Model_EXTERNETAAK_Keuzerelatie"><h6>Relatiesoort details  <a href="#global_class_Model_EXTERNETAAK">(EXTERNE) TAAK</a> Keuze relatie</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Keuze relatie</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop">Keuze tussen 'hoort bij' of 'heeft betrekking op'</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td> </td></tr><tr><th>Indicatie materiële historie</th><td> </td></tr><tr><th>Indicatie formele historie</th><td> </td></tr><tr><th>Indicatie in onderzoek</th><td> </td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Indicatie authentiek</th><td>  </td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+               </section>
+               <section id="detail_class_Model_PRODUCTDIENST"><h5>   PRODUCT/DIENST</h5>
+                  <section id="detail_association_Model_PRODUCTDIENST_heeftbetrekkingop"><h6>Relatiesoort details  <a href="#global_class_Model_PRODUCTDIENST">PRODUCT/DIENST</a> heeft betrekking op</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft betrekking op</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_Model_Keuzetussenhoortbijofheeftbetrekkingop">Keuze tussen 'hoort bij' of 'heeft betrekking op'</a>
+                           </td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>De TAAK kan betrekking hebben op een door de gemeente geleverd(e) product/dienst, waarbij de ZAAK die initieel daartoe heeft geleid afgesloten is, maar het afnemen van het product/de dienst wel door moet kunnen gaan.
+Voorbeelden:
+
+Erfpacht moet jaarlijks betaald moet worden. Voor de eerste keer was er een zaak. Voor jaren daarna geldt dat een betaaltaak moet worden uitgevoerd, om recht op het product/dienst te behouden.
+Idem voor gemeentelijke belasting.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie materiële historie</th><td>Nee</td></tr><tr><th>Indicatie formele historie</th><td>Nee</td></tr><tr><th>Indicatie in onderzoek</th><td>Nee</td></tr><tr><th>Aanduiding strijdigheid/nietigheid</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Regels</th><td> </td></tr></tbody></table>
+                     
+                  </section>
+               </section>
+               <section id="detail_class_Model_BETAALTAAK"><h5>   BETAALTAAK</h5>
+                  <section id="detail_attribute_Model_BETAALTAAK_BankrekeningOntvanger"><h6>Attribuutsoort details  <a href="#global_class_Model_BETAALTAAK">BETAALTAAK</a> Bankrekening­Ontvanger</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Bankrekening­Ontvanger</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Het IBAN waar de betaling ontvangen wordt.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_BETAALTAAK_bedrag"><h6>Attribuutsoort details  <a href="#global_class_Model_BETAALTAAK">BETAALTAAK</a> bedrag</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bedrag</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Het bedrag dat betaald moet worden.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="link" href="#detail_class_Model_TypeBedrag">Type­Bedrag</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_BETAALTAAK_omschrijvingTransactie"><h6>Attribuutsoort details  <a href="#global_class_Model_BETAALTAAK">BETAALTAAK</a> omschrijving­Transactie</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>omschrijving­Transactie</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Een omschrijving van de financiële transactie.</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+               </section>
+               
+               
+            </section>
+            <section><h4>Gegevensgroeptype details  </h4>
+               <section id="detail_class_Model_VraagAntwoord"><h5>Gegevensgroeptype   Vraag­Antwoord</h5>
+                  <section id="detail_attribute_Model_VraagAntwoord_antwoord"><h6>Attribuutsoort details  <a href="#global_class_Model_VraagAntwoord">Vraag­Antwoord</a> antwoord</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>antwoord</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Ontvangen gegevens (technisch: als key-value object).</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_VraagAntwoord_vraag"><h6>Attribuutsoort details  <a href="#global_class_Model_VraagAntwoord">Vraag­Antwoord</a> vraag</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>vraag</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td> </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Datum opname</th><td> </td></tr><tr><th>Mogelijk geen waarde</th><td>Nee</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Indicatie authentiek</th><td>Authentiek</td></tr><tr><th>Lengte</th><td> </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr><tr><th>Indicatie afleidbaar</th><td>Zie package</td></tr><tr><th>Waarde afleidbaar</th><td>Nee</td></tr></tbody></table>
+                  </section>
+               </section>
+            </section>
+            
+            
+            <section><h4>Gestructureerde datatypen  </h4>
+               <section id="detail_class_Model_TypeBedrag"><h5>Gestructureerd datatype   Type­Bedrag</h5>
+                  <section id="detail_attribute_Model_TypeBedrag_som"><h6>Data element  <a href="#global_class_Model_TypeBedrag">Type­Bedrag</a> som</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>som</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Een hoeveelheid</td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Real</a>
+                           </td></tr><tr><th>Patroon</th><td>Een getal met maximaal 2 decimalen</td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_TypeBedrag_valutasoort"><h6>Data element  <a href="#global_class_Model_TypeBedrag">Type­Bedrag</a> valutasoort</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>valutasoort</td></tr><tr><th>Herkomst</th><td> </td></tr><tr><th>Definitie</th><td>Aanduiding van de valutasoort. </td></tr><tr><th>Herkomst definitie</th><td> </td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Formaat</th><td>
+                              <a class="link" href="#detail_class_Model_VALUTASOORT">VALUTASOORT</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr></tbody></table>
+                  </section>
+               </section>
+            </section>
+            
+            <section><h4>Referentielijst  </h4>
+               <section id="detail_class_Model_VALUTASOORT"><h5>Referentielijst   VALUTASOORT</h5>
+                  <section id="detail_attribute_Model_VALUTASOORT_Begindatumgeldigheidvalutasoort"><h6>Referentie element  <a href="#global_class_Model_VALUTASOORT">VALUTASOORT</a> Begindatum geldigheid valutasoort</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Begindatum geldigheid valutasoort</td></tr><tr><th>Herkomst</th><td>BRK</td></tr><tr><th>Definitie</th><td>De datum waarop de valuta is ontstaan.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 mei 2016</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_VALUTASOORT_Einddatumgeldigheidvalutasoort"><h6>Referentie element  <a href="#global_class_Model_VALUTASOORT">VALUTASOORT</a> Einddatum geldigheid valutasoort</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Einddatum geldigheid valutasoort</td></tr><tr><th>Herkomst</th><td>BRK</td></tr><tr><th>Definitie</th><td>De datum waarop de valuta is opgeheven.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 mei 2016</td></tr><tr><th>Indicatie kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_VALUTASOORT_Naamvaluta"><h6>Referentie element  <a href="#global_class_Model_VALUTASOORT">VALUTASOORT</a> Naam valuta</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Naam valuta</td></tr><tr><th>Herkomst</th><td>BRK</td></tr><tr><th>Definitie</th><td>De naam van de valuta.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 mei 2016</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr></tbody></table>
+                  </section>
+                  <section id="detail_attribute_Model_VALUTASOORT_Valutacode"><h6>Referentie element  <a href="#global_class_Model_VALUTASOORT">VALUTASOORT</a> Valutacode</h6>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Valutacode</td></tr><tr><th>Herkomst</th><td>BRK</td></tr><tr><th>Definitie</th><td>Een unieke  code van de valuta.</td></tr><tr><th>Herkomst definitie</th><td>VNG-R</td></tr><tr><th>Datum opname</th><td>1 mei 2016</td></tr><tr><th>Indicatie kardinaliteit</th><td>1</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td> </td></tr></tbody></table>
+                  </section>
+               </section>
+            </section>
+            
+            <section><h4>Enumeratie  </h4>
+               <section id="detail_class_Model_TAAKSTATUS"><h5>Enumeratie details  TAAKSTATUS</h5>
+                  <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td>Een taak kan verschillende statussen hebben. Als de taak wordt aangemaakt, krijgt de taak initieel de status ‘Open’. Als de taak door de externe partij is uitgevoerd, wordt de status op ‘Uitgevoerd’ gezet. Daarna kan het resultaat van de uitvoering door een medewerker worden beoordeeld. Zodra dit resultaat is beoordeeld en verwerkt, krijgt de taak de status ‘Verwerkt’. Daarmee is de taak afgehandeld.
+
+Als de taak niet is uitgevoerd (bijvoorbeeld na het verstrijken van de handelingsdatum) wordt de status automatisch (via een timer) of handmatig door een medewerker gewijzigd naar ‘Niet uitgevoerd’.
+
+Als de externe partij de taak analoog heeft uitgevoerd (bijvoorbeeld als een document bij de balie is afgegeven) dan kan de medewerker de status direct van ‘Open’ naar ‘Uitgevoerd’ zetten.
+
+Als de taak niet door de externe partij uitgevoerd hoeft te worden of als de taak foutief is ingeboekt, dan kan de medewerker de taak op ‘Afgebroken’ zetten. Er vindt daarna geen verwerking van de taak meer plaats.</td></tr></tbody></table>
+                  <table style="width: 100%;" class="list"><colgroup style="width: 50%;"></colgroup><colgroup></colgroup><tbody><tr><th>Waarde</th><th>Omschrijving</th></tr><tr><td>Open</td><td></td></tr><tr><td>Uitgevoerd</td><td></td></tr><tr><td>Niet uitgevoerd</td><td></td></tr><tr><td>Afgebroken</td><td></td></tr><tr><td>Verwerkt</td><td></td></tr></tbody></table>
+               </section>
+               <section id="detail_class_Model_periodeEenheid"><h5>Enumeratie details  periode­Eenheid</h5>
+                  <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td>Opsomming van waarden van de tijdseenheid waarin een periode wordt uitgedrukt.</td></tr></tbody></table>
+                  <table style="width: 100%;" class="list"><colgroup style="width: 50%;"></colgroup><colgroup></colgroup><tbody><tr><th>Waarde</th><th>Omschrijving</th></tr><tr><td>werkdag</td><td>werkbare dagen d.w.z. alle dagen m.u.v. zaterdagen, zondagen en erkende feestdagen</td></tr><tr><td>kalenderdag</td><td>zie voor een definitie van dit begrip de AWB</td></tr><tr><td>week</td><td>7 kalenderdagen</td></tr><tr><td>maand</td><td>28, 30 of 31 kalenderdagen</td></tr><tr><td>jaar</td><td>365 of 366 kalenderdagen</td></tr></tbody></table>
+               </section>
+            </section>
+         </section>
