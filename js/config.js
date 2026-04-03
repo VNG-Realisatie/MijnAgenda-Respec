@@ -10,8 +10,8 @@ let respecConfig = {
   
   // Zie de globale property 'localizationStrings/nl' voor de lijst met toegestane specificatie-statussen
   specStatus: "IO",
-  publishDate: "2026-03-27",
-  publishVersion: "1.0.0",
+  publishDate: "2026-04-03",
+  publishVersion: "1.1.0",
 
   // Zie de globale property 'localizationStrings/nl' voor de lijst met toegestane maturities
   //previousMaturity: "IO",
@@ -29,6 +29,55 @@ let respecConfig = {
         companyURL: "https://vng.nl/artikelen/vng-realisatie",
       }
     ],
+  editors:
+    [
+      {
+        name: "Alexander Scheffer",
+        company: "JCC Software",
+        companyURL: "https://www.jccsoftware.nl",
+      },
+      {
+        name: "Marleen Schreurs",
+        company: "JCC Software",
+        companyURL: "https://www.jccsoftware.nl",
+      },
+      {
+        name: "Ron van den Enden",
+        company: "PinkRoccade",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+      {
+        name: "Rombout Westland",
+        company: "PinkRoccade",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+      {
+        name: "Aniek de Vet",
+        company: "PinkRoccade",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+      {
+        name: "Engelbert Wijnhoven",
+        company: "PinkRoccade",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+      {
+        name: "Camiel ...",
+        company: "Timeblockr",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+      {
+        name: "Rutger ...",
+        company: "Timeblockr",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+      {
+        name: "Chantal ...",
+        company: "Timeblockr",
+        companyURL: "https://www.pinkroccade.nl",
+      },
+    ],
+
 //  editors:
 //    [
 //      {
