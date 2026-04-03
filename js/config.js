@@ -24,14 +24,6 @@ let respecConfig = {
   authors:
     [
       {
-        name: "Ronald Jobse",
-        company: "VNG Realisatie",
-        companyURL: "https://vng.nl/artikelen/vng-realisatie",
-      }
-    ],
-  editors:
-    [
-      {
         name: "Alexander Scheffer",
         company: "JCC Software",
         companyURL: "https://www.jccsoftware.nl",
@@ -63,22 +55,31 @@ let respecConfig = {
       },
       {
         name: "Camiel ...",
-        company: "Timeblockr",
-        companyURL: "https://www.pinkroccade.nl",
+        company: "T:MEBLOCKR",
+        companyURL: "https://www.timeblockr.com",
       },
       {
         name: "Rutger ...",
-        company: "Timeblockr",
-        companyURL: "https://www.pinkroccade.nl",
+        company: "T:MEBLOCKR",
+        companyURL: "https://www.timeblockr.com",
       },
       {
         name: "Chantal ...",
-        company: "Timeblockr",
-        companyURL: "https://www.pinkroccade.nl",
+        company: "T:MEBLOCKR",
+        companyURL: "https://www.timeblockr.com",
       },
     ],
 
-//  editors:
+  editors:
+    [
+      {
+        name: "Ronald Jobse",
+        company: "VNG Realisatie",
+        companyURL: "https://vng.nl/artikelen/vng-realisatie",
+      }
+    ],
+
+  //  editors:
 //    [
 //      {
 //        name: "Robert Melskens",
