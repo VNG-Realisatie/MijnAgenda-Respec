@@ -54,17 +54,22 @@ let respecConfig = {
         companyURL: "https://www.pinkroccade.nl",
       },
       {
-        name: "Camiel ...",
+        name: "Camiel Eggermont",
         company: "T:MEBLOCKR",
         companyURL: "https://www.timeblockr.com",
       },
       {
-        name: "Rutger ...",
+        name: "Rutger Arling",
         company: "T:MEBLOCKR",
         companyURL: "https://www.timeblockr.com",
       },
       {
-        name: "Chantal ...",
+        name: "Chantal van der Meer",
+        company: "T:MEBLOCKR",
+        companyURL: "https://www.timeblockr.com",
+      },
+      {
+        name: "Bob Moree",
         company: "T:MEBLOCKR",
         companyURL: "https://www.timeblockr.com",
       },
