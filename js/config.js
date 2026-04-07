@@ -2,8 +2,8 @@ let respecConfig = {
 //  useLogo: true,
 //  useLabel: true,
 //  license: "eupl",
-  shortName: "Respec-im-MijnAgenda",
-  pubDomain: "im",
+  shortName: "MijnAgenda",
+  pubDomain: "cim",
 
   // Zie de globale property 'localizationStrings/nl' voor de lijst met toegestane specificatie-types
   specType: "IM",
